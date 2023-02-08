@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 
 import Button from '../button/Button';
-import { CartContext } from '../../contexts/cart.context';
+import { CartContext } from '../../contexts/CartContext';
 
-import './ProductCard.scss';
+import './productCard.scss';
 
 const ProductCard = ({ product }) => {
     const { name, price, imageUrl } = product;

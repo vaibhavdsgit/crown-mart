@@ -4,7 +4,7 @@ import {signInWithGooglePopup, createUserDocumentFromAuth, signInAuthUserWithEma
 
 import Button from "../button/Button";
 
-import './SignInForm.scss';
+import './signInForm.scss';
 
 const defaultFormFields = {
     email: "",

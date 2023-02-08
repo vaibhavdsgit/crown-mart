@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { CartContext } from '../../contexts/cart.context';
+import { CartContext } from '../../contexts/CartContext';
 
 import Button from '../button/Button';
 import CartItem from '../cart-item/CartItem';
 
 
-import './CartDropdown.scss';
+import './cartDropdown.scss';
 
 const CartDropdown = () => {
     const { cartItems } = useContext(CartContext);

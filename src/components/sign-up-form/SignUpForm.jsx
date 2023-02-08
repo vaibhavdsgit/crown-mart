@@ -6,7 +6,7 @@ import Button from "../button/Button";
 
 // import { UserContext } from "../../contexts/user.context";
 
-import './SignUpForm.scss';
+import './signUpForm.scss';
 
 const defaultFormFields = {
     displayName: "",

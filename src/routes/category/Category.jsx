@@ -2,7 +2,9 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../../components/product-card/ProductCard";
 
-import { CategoriesContext } from "../../contexts/categories.context";
+import { CategoriesContext } from "../../contexts/CategoriesContext";
+
+import "./category.scss";
 
 const Category = () => {
   const { category } = useParams();

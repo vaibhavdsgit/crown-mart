@@ -1,4 +1,4 @@
-import './CartItem.scss';
+import './cartItem.scss';
 
 const CartItem = ({ cartItem }) => {
     const { name, imageUrl, price, quantity } = cartItem;
