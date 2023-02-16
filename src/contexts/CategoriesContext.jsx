@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 import { getCategoriesAndDocumnents } from "../utils/firebase/firebase.utils";
 
 // import PRODUCTS from "../shop-data.json";
-import SHOP_DATA from '../shop-data';
+// import SHOP_DATA from '../shop-data';
 
 
 export const CategoriesContext = createContext({
@@ -16,7 +16,7 @@ export const CategoriesProvider = ({children}) => {
     useEffect(()=>{
         const getCategoriesMap = async () => {
             const categoryMap = await getCategoriesAndDocumnents();
-            console.log(categoryMap);
+            // console.log(categoryMap);
             setCategoriesMap(categoryMap);
         };
         getCategoriesMap();

@@ -29,16 +29,18 @@ const SignUpForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         
-        if(password !== confirmPassword) return;
+        if(password !== confirmPassword) {
+            alert('passwords do not match');
+            return;
+        };
         try{
-            const {user} = await createAuthUserWithEmailAndPassword(email, password);
-            // setCurrentUser(user);
+            const { user } = await createAuthUserWithEmailAndPassword(email, password);
             await createUserDocumentFromAuth(user, {displayName});
             resetFormFields();
-        }catch(error){
-            if(error.code === "auth/email-already-in-use"){
+        } catch(error) {
+            if (error.code === "auth/email-already-in-use"){
                 alert("User email already exist");
-            }else{
+            } else {
                 console.log("Error creating user", error);
             }
         }
@@ -46,15 +48,14 @@ const SignUpForm = () => {
 
     const handleChange = (event) => {
         const {name, value} = event.target;
-        setFormField({...formField, [name]: value});
-        
+        setFormField({...formField, [name]: value});   
     }
 
     return(
         <div className="sign-up-container">
             <h2>Don't have and account?</h2>
             <span>Sign Up with you Email and Password</span>
-            <form onClick={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <FormInput label="Display Name" type="text" required onChange={handleChange} name="displayName" value={displayName}/>
 
                 <FormInput label="Email" type="email" required onChange={handleChange} name="email" value={email}/>
